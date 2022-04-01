@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Inter:wght@400;500&family=Josefin+Sans:wght@300;400&family=Libre+Barcode+39+Text&family=PT+Sans:ital@1&family=Roboto+Condensed:ital,wght@1,700&family=Titillium+Web:wght@300&family=Ubuntu:ital,wght@1,500&display=swap"
+        rel="stylesheet">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+        color: white;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+    
+    .out {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .rules {
+        margin-top: 40px;
+        font-size: 20px;
+    }
+    
+    .container {
+        background-color: brown;
+        margin: 50px;
+        width: 330px;
+        height: 330px;
+        display: grid;
+        grid-template-columns: 110px 110px 110px;
+        grid-template-rows: 110px 110px 110px;
+    }
+    
+    .box {
+        border: solid 3px brown;
+        background-color: blanchedalmond;
+        text-align: center;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'IBM Plex Sans', sans-serif;
+        color: black;
+    }
+    
+    .box:active {
+        background-color: rgb(253, 253, 252);
+        border: solid 2.5px brown;
+    }
+    
+    .control {
+        height: 40px;
+        margin-top: 5px;
+        margin-right: 20px;
+        color: white;
+        font-size: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: brown;
+        border: solid 1px blanchedalmond;
+        border-radius: 5px;
+    }
+    
+    .control:active {
+        background-color: rgba(165, 42, 42, 0.548);
+        transform: scale(1.01);
+    }
+    
+    .controls {
+        margin: 50px;
+    }
+    
+    .real_rules {
+        margin-top: 50px;
+    }
+    
+    .rules_head {
+        font-size: 30px;
+        color: yellow;
+    }
+    
+    .rules_text {
+        font-size: 25px;
+    }
+    
+    .winner {
+        display: none;
+        font-size: 30px;
+        color: yellow;
+        margin-top: 50px;
+    }
+</style>
+
+
+<body>
+    <h1 style="text-align: center; margin-top: 30px; font-size: 40px;">Tic Tac Toe</h1>
+    <div class="out">
+        <div class="container" id="container">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
+            <div class="box" id="box6"></div>
+            <div class="box" id="box7"></div>
+            <div class="box" id="box8"></div>
+            <div class="box" id="box9"></div>
+        </div>
+        <div class="controls" id="controls">
+            <input type="submit" class="control" id="start" value="Start">
+            <input type="submit" class="control" id="reset" value="Reset">
+            <div class="rules" id="rules">
+            </div>
+            <div class="real_rules">
+                <p class="rules_head">Rules to play:</p>
+                <p class="rules_text">• Yellow represents your turn...</p>
+            </div>
+            <div class="win">
+                <p class="winner" id="winner">Winner: </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
